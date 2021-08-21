@@ -14,7 +14,7 @@ port = 8080
 
 def set_connection(name):
     global conn
-    conn = http.client.HTTPConnection("127.0.0.1:8000")
+    conn = http.client.HTTPConnection("3.83.216.200:8000")
     message = json.dumps({
         "name": name,
         "port": port
