@@ -10,11 +10,11 @@ conn = ''
 headers = {
     'Content-type': 'application/json;charset=utf-8'
 }
-port = 8080
+port = 8081
 
 def set_connection(name):
     global conn
-    conn = http.client.HTTPConnection("3.83.216.200:8000")
+    conn = http.client.HTTPConnection("44.196.29.126:8000")
     message = json.dumps({
         "name": name,
         "port": port
