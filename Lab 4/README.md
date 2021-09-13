@@ -43,4 +43,4 @@ $python3 Client/client.py
 
 ## **Protocolo AMQP**
 
-![alt text](http://github.com/agarciam14/ST0263-TE_Telematica/tree/master/Lab 4/mind-map.jpg)
+![alt text](https://github.com/agarciam14/ST0263-TE_Telematica/blob/master/Lab%204/mind-map.jpg)
