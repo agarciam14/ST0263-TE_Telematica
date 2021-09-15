@@ -47,7 +47,7 @@ Para obtener ayuda sobre la implementación:
 $ python3 Client/client.py -h
 ```
 
-**Aclaraciones**
+## **Aclaraciones**
 
 - Pueden conectarse tantos clientes como se desee, pero el servidor siempre desbe estar activo de forma previa para el correcto funcionamiento
 
