@@ -28,6 +28,7 @@ $ python3 Server/server.py
 ```
 
 ### **Correr Cliente**
+** Se sugiere desplegar en dos servidores para efectos de pruebas, ya que en local puede generar problemas**
 
 Por defecto:
 ``` bash
