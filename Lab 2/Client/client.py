@@ -4,17 +4,33 @@ import json
 import clientServer
 import threading
 import sys
+import argparse
+
+DEFAULT_IP_ADDRESS = '44.196.29.126'
+DEFAULT_PORT = '8000'
+
+parser = argparse.ArgumentParser(description=('Launch client'))
+
+# Optional field.
+parser.add_argument(
+    '-i', '--ip_address', default=DEFAULT_IP_ADDRESS, required=False,
+    help=("The Server elastic IP address, It's set by default as 44.196.29.126"))
+
+parser.add_argument(
+    '-p', '--port', default=DEFAULT_PORT, required=False, type=int,
+    help=("The Client server port, It's set by default as 8000"))
+
+args = parser.parse_args()
 
 connected = False
 conn = ''
 headers = {
     'Content-type': 'application/json;charset=utf-8'
 }
-port = 8081
 
 def set_connection(name):
     global conn
-    conn = http.client.HTTPConnection("44.196.29.126:8000")
+    conn = http.client.HTTPConnection(f"{args.ip_address}:8000")
     message = json.dumps({
         "name": name,
         "port": port
@@ -40,7 +56,7 @@ def disconnect(name):
     print("-----%s-----" % response.read(1000).decode())
 
 if __name__ == "__main__":
-    client_server = threading.Thread(target=clientServer.main, args=(port,))
+    client_server = threading.Thread(target=clientServer.main, args=(args.port,))
     client_server.daemon = True
     client_server.start()
 

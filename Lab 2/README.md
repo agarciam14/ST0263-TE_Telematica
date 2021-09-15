@@ -1,15 +1,10 @@
-# ST0263-TE_Telematica 
+# **Laboratio 2 Tópicos Especiales de Telemática.**
 
-# Autor: Anthony García Moncada
-
-## **Documentación Laboratio 2 Tópicos Especiales de Telemática.**
-
-## Chat con comunicacion por protocolo HTTP
+Chat con comunicacion por protocolo HTTP
 
 **Protocolo y Arquitectura**
 
-En este laboratorio se realizo una comunicacion por Protocolo HTTP
-tambien se realizo en una arquitectura Cliente/Servidor, con el agregado de un client server para recibir los mensajes enviados por el servidor central, aún así se conserva la arquitectura, ya que toda la comunicación es intermediada por el servidor.
+En este laboratorio se realizó una comunicación por Protocolo HTTP, también se realizó en una arquitectura Cliente/Servidor, con el agregado de un client server para recibir los mensajes enviados por el servidor central, aún así se conserva la arquitectura, ya que toda la comunicación es intermediada por el servidor.
 
 ## **Requerimientos**
 
@@ -19,20 +14,37 @@ tambien se realizo en una arquitectura Cliente/Servidor, con el agregado de un c
 
 **pip version**
 
-pip 20.2.2
+20.2.2
 
-**Configuracion inicial**
+## **Configuracion inicial**
 
-- No es necesario instalar ninguna libreria extra para ejecutar el proyecto
+No es necesario instalar ninguna libreria extra para ejecutar el proyecto
+## **Ejecución**
 
-- Se debe cambiar en el archivo **client.py** la dirección del servidor (la dispuesta corresponde a la dirección ip elástica de la instancia desplegada en AWS), en el caso local por "127.0.0.1" y en el caso de una instancia en AWS se debe colocar la dirección elástica de la misma o su ip pública en su defecto.
 
-
-- **Correr Servidor**
+### **Correr Servidor**
+``` bash
 $ python3 Server/server.py
+```
 
-- **Correr Cliente**
-$python3 Client/client.py
+### **Correr Cliente**
+
+Por defecto:
+``` bash
+$ python3 Client/client.py
+```
+
+La dirección IP por defecto corresponde a la instancia desplegada en Ec2, para definir la IP manualmente, o el puerto:
+
+``` bash
+$ python3 Client/client.py [-i {ip_address}] [-p {port}]
+```
+
+Para obtener ayuda sobre la implementación:
+
+``` bash
+$ python3 Client/client.py -h
+```
 
 **Aclaraciones**
 
