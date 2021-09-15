@@ -46,13 +46,13 @@ Para obtener ayuda sobre la implementación:
 $ python3 Client/client.py -h
 ```
 
-**Aclaraciones**
+## **Aclaraciones**
 
-- Pueden conectarse tantos clientes como se desee, pero el servidor siempre desbe estar activo de forma previa para el correcto funcionamiento
+- Pueden conectarse tantos clientes como se desee, pero el servidor siempre debe estar activo de forma previa para el correcto funcionamiento
 
 - El archivo **clientServer.py** se encarga de arrancar el servicio del cliente encargado de recibir los mensajes enviados por los demás clientes a través del servidor
 
-- Al conectar un cliente, este te va a pedir digitar un nombre, una vez digitado, podrás ver cuantas clientes hay en línea además del conectado
+- Al conectar un cliente, este te va a pedir digitar un nombre, una vez digitado, podrás ver cuantos clientes hay en línea además del conectado
 
 - Cuando un cliente se conecta, los demás clientes en línea recibirán un mensaje avisándoles que este se ha conectado, lo mismo aplica al desconectarse
 
