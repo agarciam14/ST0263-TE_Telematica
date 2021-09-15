@@ -1,11 +1,10 @@
 
-# **Documentación Laboratio 4 Tópicos Especiales de Telemática.**
+# **Laboratio 4 Tópicos Especiales de Telemática.**
 
-## Autor: Anthony García Moncada
 
 RabbitMQ: Simulación de un gestor de tareas para procesamiento distribuido
 
-# **Requerimientos**
+## **Requerimientos**
 
 **Python version**
 
@@ -13,57 +12,57 @@ RabbitMQ: Simulación de un gestor de tareas para procesamiento distribuido
 
 **pip version**
 
-pip 20.2.2
+20.2.2
 
-# **Configuracion inicial**
+## **Configuracion inicial**
 
 Es necesario instalar la libreria pika
 ```bash
-pip install pika
+$ pip install pika
 ```
-# **Ejecución**
+## **Ejecución**
 
 
-## **Correr Servidor**
+### **Correr Servidor**
 
 Por defecto:
 ``` bash
-python3 Server/server.py
+$ python3 Server/server.py
 ```
 
 La dirección IP por defecto corresponde a la instancia con RabbitMQ desplegada en Ec2, para definir la IP manualmente:
 
 ``` bash
-python3 Server/server.py -i {ip_address}
+$ python3 Server/server.py -i {ip_address}
 ```
 
 Para obtener ayuda sobre la implementación:
 
 ``` bash
-python3 Server/server.py -h
+$ python3 Server/server.py -h
 ```
 
-## **Correr Cliente**
+### **Correr Cliente**
 
 Por defecto:
 ``` bash
-python3 Client/client.py
+$ python3 Client/client.py
 ```
 
 La dirección IP por defecto corresponde a la instancia con RabbitMQ desplegada en Ec2, para definir la IP manualmente:
 
 ``` bash
-python3 Client/client.py -i {ip_address}
+$ python3 Client/client.py -i {ip_address}
 ```
 
 Para obtener ayuda sobre la implementación:
 
 ``` bash
-python3 Client/client.py -h
+$ python3 Client/client.py -h
 ```
 
 
-# **Aclaraciones**
+## **Aclaraciones**
 
 - Pueden desplegarse tantos clientes como servidores se desee
 
@@ -74,6 +73,6 @@ python3 Client/client.py -h
 - Una vez desplegado el servidor(es), éste se encargará de enviar notificaciones al usuario por correo de la tarea realizada.
 
 
-# **Protocolo AMQP**
+## **Protocolo AMQP**
 
 ![alt text](https://github.com/agarciam14/ST0263-TE_Telematica/blob/master/Lab%204/mind-map.jpg)
