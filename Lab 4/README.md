@@ -1,14 +1,11 @@
-# ST0263-TE_Telematica 
 
-# Autor: Anthony García Moncada
+# **Documentación Laboratio 4 Tópicos Especiales de Telemática.**
 
-## **Documentación Laboratio 4 Tópicos Especiales de Telemática.**
+## Autor: Anthony García Moncada
 
-## RabbitMQ
+RabbitMQ: Simulación de un gestor de tareas para procesamiento distribuido
 
-Simulación de un gestor de tareas para procesamiento distribuido
-
-## **Requerimientos**
+# **Requerimientos**
 
 **Python version**
 
@@ -18,21 +15,55 @@ Simulación de un gestor de tareas para procesamiento distribuido
 
 pip 20.2.2
 
-**Configuracion inicial**
+# **Configuracion inicial**
 
-- Es necesario instalar la libreria pika
-$ pip install pika
+Es necesario instalar la libreria pika
+```bash
+pip install pika
+```
+# **Ejecución**
 
-- Se debe cambiar en los archivos **client.py** y **server.py** la dirección del servidor con RabbitMQ (la dispuesta corresponde a la dirección ip elástica de la instancia desplegada en AWS).
+
+## **Correr Servidor**
+
+Por defecto:
+``` bash
+python3 Server/server.py
+```
+
+La dirección IP por defecto corresponde a la instancia con RabbitMQ desplegada en Ec2, para definir la IP manualmente:
+
+``` bash
+python3 Server/server.py -i {ip_address}
+```
+
+Para obtener ayuda sobre la implementación:
+
+``` bash
+python3 Server/server.py -h
+```
+
+## **Correr Cliente**
+
+Por defecto:
+``` bash
+python3 Client/client.py
+```
+
+La dirección IP por defecto corresponde a la instancia con RabbitMQ desplegada en Ec2, para definir la IP manualmente:
+
+``` bash
+python3 Client/client.py -i {ip_address}
+```
+
+Para obtener ayuda sobre la implementación:
+
+``` bash
+python3 Client/client.py -h
+```
 
 
-- **Correr Servidor**
-$ python3 Server/server.py
-
-- **Correr Cliente**
-$python3 Client/client.py
-
-**Aclaraciones**
+# **Aclaraciones**
 
 - Pueden desplegarse tantos clientes como servidores se desee
 
@@ -40,7 +71,9 @@ $python3 Client/client.py
 
 - No es necesario desplegar el servidor de forma previa, ya que todo el proceso se hace de forma asíncrona
 
+- Una vez desplegado el servidor(es), éste se encargará de enviar notificaciones al usuario por correo de la tarea realizada.
 
-## **Protocolo AMQP**
+
+# **Protocolo AMQP**
 
 ![alt text](https://github.com/agarciam14/ST0263-TE_Telematica/blob/master/Lab%204/mind-map.jpg)
