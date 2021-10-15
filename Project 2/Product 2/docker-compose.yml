@@ -24,6 +24,6 @@ services:
     environment:
       WORDPRESS_DB_HOST: proyecto2database.cdyknxebaa9e.us-east-1.rds.amazonaws.com:3306
       WORDPRESS_DB_USER: admin
-      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_PASSWORD: Asd123***
 volumes:
   wordpress:
